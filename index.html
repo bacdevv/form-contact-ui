@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Form</title>
+		<!-- Font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Stylsheet CSS -->
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__heading">Contact Us</h1>
+			<p class="header__desc">Any question or remarks? Just write us a message!</p>
+		</header>
+
+		<main class="contact">
+			<div class="container">
+				<!-- === CONTACT INFO === -->
+				<section class="contact-info">
+					<h2 class="contact-info__heading">Contact Information</h2>
+					<p class="contact-info__desc">
+						Fill up the form and your Team will get back to you within 24 hours.
+					</p>
+
+					<div class="contact-list">
+						<a href="#!" class="contact-item">
+							<i class="fa-solid fa-phone"></i>
+							<span class="contact-item__info">+84 969 401 600</span>
+						</a>
+
+						<a href="mailto:vietbac.coding@gmail.com" class="contact-item">
+							<i class="fa-solid fa-envelope"></i>
+							<span class="contact-item__info">vietbac.coding@gmail.com</span>
+						</a>
+
+						<a href="#!" class="contact-item">
+							<i class="fa-solid fa-location-dot"></i>
+							<span class="contact-item__info">6 D3E Tan Phuoc, Tan Binh</span>
+						</a>
+					</div>
+
+					<div class="contact-social">
+						<a href="#!" class="contact-social__icon"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#!" class="contact-social__icon"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#!" class="contact-social__icon"><i class="fa-brands fa-square-instagram"></i></a>
+						<a href="#!" class="contact-social__icon"><i class="fa-brands fa-linkedin"></i></a>
+					</div>
+				</section>
+
+				<!-- === CONTACT FORM === -->
+				<div class="contact-form">
+					<form class="form-main" action="" autocomplete="off">
+						<div class="form-row">
+							<div class="form-group">
+								<label class="label-info" for="first-name">First Name</label>
+								<input class="form-input" type="text" id="first-name" name="First Name" placeholder="John" />
+							</div>
+
+							<div class="form-group">
+								<label class="label-info" for="last-name">Last Name</label>
+								<input class="form-input" type="text" id="last-name" name="Last Name" placeholder="Doe" />
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group">
+								<label class="label-info" for="email">Mail</label>
+								<input
+									class="form-input"
+									type="email"
+									id="email"
+									name="Email"
+									placeholder="johndoe@gmail.com"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label class="label-info" for="phone">Phone</label>
+								<input class="form-input" type="tel" id="phone" name="Phone" placeholder="+987 654 321" />
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group">
+								<label for="" class="form-label">What the of website do you need?</label>
+
+								<div class="radio-group">
+									<div class="radio-btn">
+										<input name="gender" type="radio" id="web-design" />
+										<label for="web-design">Web Design</label>
+									</div>
+
+									<div class="radio-btn">
+										<input name="gender" type="radio" id="web-development" />
+										<label for="web-development">Web Development</label>
+									</div>
+
+									<div class="radio-btn">
+										<input name="gender" type="radio" id="logo-design" />
+										<label for="logo-design">Logo Design</label>
+									</div>
+
+									<div class="radio-btn">
+										<input name="gender" type="radio" id="other" />
+										<label for="other">Other</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group">
+								<label class="label-textarea" for="textarea">Message</label>
+								<textarea
+									class="form-textarea"
+									name="Content"
+									id="textarea"
+									placeholder="Write your message..."
+									oninput="onResize(this)"
+								></textarea>
+							</div>
+						</div>
+
+						<div class="form-row submit-box">
+							<button class="submit-btn" type="submit">Send Message</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script>
+			function onResize() {
+				e.style.height = "auto";
+				e.style.height = e.scrollHeight + 3 + "px";
+			}
+		</script>
+	</body>
+</html>
