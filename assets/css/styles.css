@@ -31,6 +31,14 @@ button {
 	font-family: inherit;
 }
 
+.error {
+	margin-top: 4px;
+	color: tomato;
+	font-size: 1.3rem;
+	font-weight: 500;
+	visibility: hidden;
+}
+
 .header {
 	text-align: center;
 }
@@ -50,7 +58,7 @@ button {
 .contact {
 	width: 90rem;
 	padding: 0.8rem;
-	margin-top: 5rem;
+	margin-top: 3rem;
 	border-radius: 0.8rem;
 	background: #fff;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -161,14 +169,27 @@ button {
 	flex-grow: 1;
 }
 
+.contact-form:has(:invalid) .submit-btn {
+	pointer-events: none;
+	opacity: 0.8;
+}
+
 .form-row {
 	display: flex;
 	gap: 3.2rem;
 	margin-bottom: 3.2rem;
 }
 
+.form-row:last-child {
+	margin-bottom: 0;
+}
+
 .form-group {
 	flex-grow: 1;
+}
+
+.form-group:has(:invalid:not(:placeholder-shown)) .error {
+	visibility: visible;
 }
 
 .form-group:focus-within .label-info {
@@ -292,4 +313,9 @@ button {
 	background: #3e2093;
 	font-weight: 500;
 	border-radius: 8px;
+}
+
+.submit-btn:hover {
+	opacity: 0.9;
+	cursor: pointer;
 }
